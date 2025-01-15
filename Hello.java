@@ -32,5 +32,33 @@ class Hello {
          int resultss=j*k;
 
          System.out.print(resultss);
+
+         /*
+          * Arithemtic operations
+          int num=4;
+          num++ post Increment  fetches then Increments
+          ++num pre increment increment then fetches
+          */
+
+          /* Relational Operators
+           *
+           * <>less and grater that
+           * !=not equal to
+           * == equal to
+           */
+
+           /*Logic Operators
+            *And &
+            Or |
+            Not !s
+            Short Cercuits && || !
+            */
+
+            int r=3;
+            int t=4;
+            int u=10;
+            boolean outCome=r<t && r<u ;
+
+            System.out.println(outCome);
     }
 }
