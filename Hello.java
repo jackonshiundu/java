@@ -60,5 +60,49 @@ class Hello {
             boolean outCome=r<t && r<u ;
 
             System.out.println(outCome);
+
+            /* Ternary Operatorss
+             */
+
+             int n=4;
+             int p =0;
+             p= n%2==0?10:11;
+             System.out.println(p);
+
+             /* Switch Statement
+              */
+              int q=1;
+
+              switch (q) {
+                case 1:
+                    System.out.println("Monday");
+                    break;
+                case 2:
+                    System.out.println("Thurday");
+                    break;
+                case 3:
+                    System.out.println("Wednesday");
+                    break;
+                default:
+                    System.out.println("No Day");
+                    break;
+              }
+
+              /*
+               *Loops
+               */
+              /*
+               * While Loop
+               */
+
+               int f=2;
+               while(f<=4){
+                System.out.println("Hi " + f);
+                f++;
+               }
+               /*
+                * Do While Loop
+                */
+
     }
 }
