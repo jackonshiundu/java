@@ -103,6 +103,11 @@ class Hello {
                /*
                 * Do While Loop
                 */
+                int o=1;
+                do{
+                    System.out.println("Hello"+o);
+                    o++;
+                }while(o<1)
 
     }
 }
