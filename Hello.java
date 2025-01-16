@@ -107,7 +107,21 @@ class Hello {
                 do{
                     System.out.println("Hello"+o);
                     o++;
-                }while(o<1)
+                }while(o<1);
+
+                /*
+                 * For Loop
+                 */
+
+                 for(int m=1;m<=5;m++){
+                    System.out.println("Day" + m);
+                    int time=1;
+                    for(;time<9;){
+                        System.out.println("Time" + (time+8) +"-"+(time+9));
+                        time++;
+
+                    }
+                 }
 
     }
 }
