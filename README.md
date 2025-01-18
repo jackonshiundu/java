@@ -91,3 +91,60 @@ This Java program demonstrates the concept of method overloading in the Calculat
    This program serves as an example of how to use method overloading in Java. It shows how different parameter types or counts can allow the same method name to perform similar operations but with different input data. This is a powerful feature in object-oriented programming, making code more readable and easier to maintain.
 
 # Arrays.Java
+
+This Java program demonstrates various concepts related to arrays, including single-dimensional arrays, multi-dimensional arrays, jagged arrays, and using objects within arrays. Additionally, it shows how to use enhanced for loops for iteration. The program also defines a Student class to demonstrate working with objects in arrays.
+
+1. Student Class
+   The Student class contains three fields:
+
+   int rollNo: Represents the student's roll number.
+   String name: Represents the student's name.
+   int marks: Represents the student's marks.
+   This class is used to create Student objects, which are later stored in an array.
+
+2. Main Method (Entry Point)
+   The main method demonstrates various types of arrays and their usage.
+
+   a. Single-Dimensional Arrays
+   Creating and Re-assigning Values:
+   The program creates an integer array nums and initializes it with values {3, 5, 8, 9}. The second element (nums[1]) is updated to 10.
+   A second array nums2 is created using the new keyword with a size of 5. The values are then assigned individually to the elements.
+   The program prints the values of nums2 using a simple for loop.
+   b. Multi-Dimensional Arrays
+   A 2D array multiDimenArray is created with dimensions 3x4 (3 rows and 4 columns).
+   The array is populated with random values between 0 and 99 using Math.random().
+   The values of the 2D array are printed using two nested for loops, followed by printing the values using an enhanced for loop (also known as a "foreach" loop).
+   c. Jagged Arrays
+   A jagged array numArrays is created, where each row can have a different number of columns. In this example:
+   The first row has 3 elements.
+   The second row has 6 elements.
+   The third row has 4 elements.
+   Each element in the jagged array is populated with random values using Math.random().
+   The jagged array is printed using an enhanced for loop.
+   d. Arrays of Objects
+   Three Student objects (s1, s2, s3) are created, and their properties (roll number, name, and marks) are set.
+   These Student objects are stored in a Student array called students.
+   The program uses an enhanced for loop to print out the name and marks of each student.
+
+3. Output:
+   The program produces the following outputs:
+
+   The values of the nums2 array after reassigning certain elements.
+   The randomly generated values in the multiDimenArray (2D array).
+   The randomly generated values in the numArrays (jagged array).
+   The names and marks of each student in the students array.
+
+4. Key Concepts Demonstrated:
+   Single-Dimensional Arrays: Arrays that store a collection of elements of the same type.
+   Multi-Dimensional Arrays: Arrays that store other arrays, such as 2D arrays, to represent matrices or grids.
+   Jagged Arrays: Arrays of arrays where each sub-array can have a different size.
+   Enhanced For Loop: A more concise loop used to iterate over arrays and collections.
+   Objects in Arrays: How to store and access objects (in this case, Student objects) within arrays.
+5. Conclusion:
+   This program provides examples of:
+
+Creating and using single-dimensional, multi-dimensional, and jagged arrays.
+Using random values to populate arrays.
+Working with objects (i.e., Student objects) stored in arrays.
+Iterating over arrays with both traditional and enhanced for loops.
+This program is useful for understanding basic array manipulation, object-oriented programming with classes, and various array types in Java.
