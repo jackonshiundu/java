@@ -1,6 +1,7 @@
 # java
 
-Hello.java File
+# Hello.java
+
 Prerequisites
 To run this Java program, you need the following:
 
@@ -53,3 +54,40 @@ While Loop: A loop that continues as long as the condition is true.
 Do-While Loop: Similar to a while loop, but it guarantees at least one execution of the code block.
 For Loop: A loop with initialization, condition check, and iteration in a single line.
 The program demonstrates each type of loop with example outputs printed to the console
+
+# Classes.java
+
+This Java program demonstrates the concept of method overloading in the Calculator class. The program defines multiple versions of the add method with different parameter lists, showcasing how method overloading allows the same method name to handle different types and numbers of parameters.
+
+1. Calculator Class
+   The Calculator class contains several versions of the add method, each with a different parameter list.
+
+   Instance Variable:
+
+   int a: This variable is declared but not used in this program.
+   Methods:
+
+   public int add(int n1, int n2): This method accepts two integer parameters, adds them together, and returns the result as an integer.
+   public int add(int n1, int n2, int n3): This overloaded version of the add method accepts three integer parameters, adds them together, and returns the result as an integer.
+   public double add(double n1, int n2, int n3): This version of the add method accepts a double and two int parameters. It adds them together and returns the result as a double.
+
+2. Main Method (Entry Point)
+   The main method is the entry point of the program. It demonstrates the usage of the Calculator class and method overloading.
+
+   An object of the Calculator class (calc) is created.
+   The add(int n1, int n2, int n3) method is called with three integer parameters (4, 5, and 5). The result (14) is printed to the console.
+
+3. Output:
+   The program outputs:
+
+   The result of adding three integers using the overloaded add method, which is 14.
+
+4. Key Concept Demonstrated:
+   Method Overloading: The program demonstrates method overloading by defining multiple versions of the add method with different parameter types and numbers. This allows the same method name to perform different types of addition operations.
+5. Explanation of Method Overloading:
+   Method overloading allows you to define multiple methods with the same name in the same class, as long as they differ in the number or type of parameters.
+   In this program, the add method is overloaded three times to handle two integers, three integers, and one double along with two integers.
+6. Conclusion:
+   This program serves as an example of how to use method overloading in Java. It shows how different parameter types or counts can allow the same method name to perform similar operations but with different input data. This is a powerful feature in object-oriented programming, making code more readable and easier to maintain.
+
+# Arrays.Java
