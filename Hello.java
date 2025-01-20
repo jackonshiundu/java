@@ -125,3 +125,11 @@ class Hello {
 
     }
 }
+//Naming Convension in Java
+
+//CLass and interface -Calc, -basically capital letter at the beginning
+// Variables and method-mark,show()-basically small letters
+//Constants All capital-you can use _ to deliniate.
+
+//Camel Casing-helloWorrld()
+//Snake casing -allowed though not recommended.
