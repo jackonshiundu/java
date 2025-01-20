@@ -254,3 +254,59 @@ Kakamega 00100
 Nairobi 00100
 Mombasa 00100
 Software Developer
+
+# Inheritance.java
+
+This Java program demonstrates the concept of Inheritance in Object-Oriented Programming (OOP) through three classes: Calc, AdvancedCalc, and AveryAdvancedCalc. It shows how inheritance works by creating child classes that extend the functionality of a parent class, allowing for reuse of code and the addition of more specialized features in derived classes.
+
+Key Concepts:
+
+1. Inheritance:
+   Inheritance is one of the key principles of OOP. It allows a class (child or subclass) to inherit fields and methods from another class (parent or superclass). This helps promote code reuse and establishes a relationship between classes.
+
+   In this program:
+
+   Single-level inheritance: The AdvancedCalc class is a subclass of the Calc class. It inherits the basic arithmetic operations (addition and subtraction) from the Calc class and adds more advanced operations like multiplication and division.
+   Multilevel inheritance: The AveryAdvancedCalc class is a subclass of AdvancedCalc, which in turn is a subclass of Calc. The AveryAdvancedCalc class inherits operations from both Calc and AdvancedCalc and adds a more advanced operation: calculating powers.
+
+2. Single-level Inheritance:
+   In single-level inheritance, a subclass inherits from a single superclass. This allows the subclass to extend the functionality of the superclass.
+
+   In the code:
+
+   The AdvancedCalc class extends the Calc class and inherits its methods (add and subtract).
+   The AdvancedCalc class adds new methods (multiply and devide) for performing advanced arithmetic operations.
+   Example:
+
+   class AdvancedCalc extends Calc {
+   public int multiply(int n1, int n2) {
+   return n1 \* n2;
+   }
+
+   public int devide(int n1, int n2) {
+   return n1 / n2;
+   }
+   }
+
+3. Multilevel Inheritance:
+   In multilevel inheritance, a class inherits from a subclass, creating a chain of inheritance. In this program, the AveryAdvancedCalc class is at the top of the inheritance hierarchy. It inherits from AdvancedCalc, which in turn inherits from Calc.
+
+   The AveryAdvancedCalc class extends the functionality further by adding a method (power) to calculate the power of a number.
+
+   class AveryAdvancedCalc extends AdvancedCalc {
+   public int power(int n1, int n2) {
+   return (int) Math.pow(n1, n2);
+   }
+   }
+
+4. Class Terminology:
+   In the context of inheritance, the following terms are commonly used:
+
+   Parent Class or Super Class: The class that provides fields and methods to be inherited by other classes. In this case, Calc is the parent class.
+   Child Class or Sub Class: The class that inherits fields and methods from a parent class. AdvancedCalc and AveryAdvancedCalc are child classes.
+   Base Class: The class from which another class derives, which can be the same as the parent class.
+   Derived Class: The class that is derived from another class, which can be a child class or subclass.
+
+Example Output:
+
+15 15 160000
