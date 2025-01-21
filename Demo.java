@@ -1,25 +1,4 @@
-class A{
-    public A(){
-        System.out.println("in A ");
-    }
-    public A(int n){
-        System.out.println("in A " + n);
-    }
-}
-class B extends A{
-    public B(){
-        super();
-        System.out.println("in B ");
-    }
-    public B(int n){
-        //we use super to cann a parennt parametarised constructor.
-        //super(n);
-        //this() executes constructor of the same class.
-        this();
-        System.out.println("in B " + n);
-    }
-}
-
+import tools.B;
 class Demo {
     public static void main(String[] args) {
         B r1=new B(4);
