@@ -335,9 +335,11 @@ B.java (inside tools package)
 
 package tools;
 
-public class B extends A {
+public class B extends A
+{
 // Default constructor
-public B() {
+public B()
+{
 super(); // Calls the parent class constructor (A)
 System.out.println("in B ");
 }
@@ -378,3 +380,79 @@ in B 4
 "in A" would be printed by the constructor of class A (assuming it exists).
 "in B" is printed by the default constructor of class B.
 "in B 4" is printed by the parameterized constructor of class B.
+
+# Poly.java
+
+This Java program demonstrates the concept of runtime polymorphism (also known as late binding or dynamic method dispatch) in Object-Oriented Programming (OOP). The program defines three classes, A, B, and C, where B and C are subclasses of A. The show() method is overridden in both the B and C classes. The behavior of the show() method is determined at runtime based on the object that is instantiated, showcasing runtime polymorphism.
+
+Key Concepts:
+Polymorphism: In object-oriented programming, polymorphism refers to the ability of an object to take on many forms. Specifically, it allows methods to be called on objects of different classes, with each class implementing the method in its own way.
+
+Polymorphism is mainly of two types:
+
+Compile-time Polymorphism (Method Overloading): The method to be called is determined at compile time.
+Runtime Polymorphism (Method Overriding): The method to be called is determined at runtime.
+In this program, runtime polymorphism is demonstrated using method overriding, where the version of the show() method that is called depends on the actual object that is instantiated at runtime.
+
+Code Breakdown
+
+1.  Class A (Parent Class)
+    class A {
+    public void show() {
+    System.out.println("This is A");
+    }
+    }
+    The show() method is defined in class A to print "This is A".
+    This class acts as the base class for both B and C. 2. Class B (Child Class of A)
+    java
+    Copy
+    class B extends A {
+    public void show() {
+    System.out.println("This is B");
+    }
+    }
+    Class B overrides the show() method of class A. When the show() method is called on an instance of class B, it prints "This is B".
+2.  Class C (Child Class of A)
+
+    class C extends A {
+    public void show() {
+    System.out.println("This is C");
+    }
+    }
+    Similar to class B, class C also overrides the show() method of class A. When the show() method is called on an instance of class C, it prints "This is C".
+
+3.  Poly (Main Class)
+
+    public class Poly {
+    public static void main(String[] args) {
+    // This demonstrates runtime polymorphism, where the method to be called
+    // is determined at runtime based on the object's actual type.
+
+          A obj = new A(); // obj is an instance of A
+          obj.show(); // This will call A's show() method
+
+          obj = new B(); // obj is now an instance of B
+          obj.show(); // This will call B's overridden show() method
+
+          obj = new C(); // obj is now an instance of C
+          obj.show(); // This will call C's overridden show() method
+
+    }
+    }
+    In the main method, a reference variable obj of type A is used to hold objects of A, B, and C.
+    At runtime, the appropriate show() method is called based on the type of the object obj is referring to.
+    Key Concept: Runtime Polymorphism
+    Runtime Polymorphism occurs when the method to be called is determined at runtime based on the type of the object. This is achieved through method overriding.
+
+In this program:
+
+At first, obj is of type A, so calling obj.show() invokes the show() method of class A.
+Then, obj is reassigned to an instance of class B, so obj.show() invokes the overridden show() method in class B.
+Finally, obj is reassigned to an instance of class C, so obj.show() invokes the overridden show() method in class C.
+This behavior is dynamic, as it is determined based on the actual object type that the reference variable obj is pointing to at runtime.
+
+Expected Output
+
+This is A
+This is B
+This is C
