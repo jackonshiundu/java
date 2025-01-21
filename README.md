@@ -310,3 +310,71 @@ Key Concepts:
 Example Output:
 
 15 15 160000
+
+# Demo.java
+
+This File demonstrates the use of packages, constructors (including super and this()), and method overriding in Java. The program includes two classes: Demo and B. The B class extends a parent class A whitch are in the same packagee tools, and the constructor chaining behavior is explored.
+
+Key Concepts:
+Packages: Grouping classes for better organization.
+Constructor Chaining: Using super() and this() in constructor calls.
+Method Overriding: Overriding methods from a parent class in the child class.
+
+Demo.java
+
+import tools.B;
+
+class Demo {
+public static void main(String[] args) {
+B r1 = new B(4); // Creating an instance of B with the parameterized constructor
+}
+}
+In this file, we create an object r1 of class B, passing 4 as an argument to the constructor. The constructor of B demonstrates the usage of both super() and this().
+
+B.java (inside tools package)
+
+package tools;
+
+public class B extends A {
+// Default constructor
+public B() {
+super(); // Calls the parent class constructor (A)
+System.out.println("in B ");
+}
+
+    // Parameterized constructor
+    public B(int n) {
+        this(); // Calls the default constructor of class B
+        System.out.println("in B " + n);
+    }
+
+}
+Key Points:
+super():
+The super() keyword is used to invoke the constructor of the parent class (A). It must be called before any other code in the child class constructor unless the child class constructor calls another constructor using this().
+
+this():
+The this() keyword refers to another constructor in the same class. It is used for constructor chaining within the same class. In this case, the parameterized constructor calls the default constructor using this() before executing the rest of the code.
+
+Constructor Behavior:
+The B(int n) constructor calls the B() constructor first (through this()), which in turn calls super() to invoke the constructor of the parent class A. This results in the parent class constructor being executed first, followed by the child class constructor's output.
+
+Method Overriding (Assumed with class A):
+While not directly shown in the code, method overriding would be relevant if the class A has a method that B overrides. Overriding is a concept where the child class provides its specific implementation of a method defined in the parent class.
+
+Execution Flow:
+The program creates an object r1 of class B with the value 4.
+The constructor B(int n) is called:
+this() is invoked, calling the default constructor B().
+Inside B(), super() is called, which invokes the constructor of the parent class A (not shown in the code).
+After the parent class constructor completes, "in B" is printed from the B() constructor.
+Then, control returns to B(int n), where "in B 4" is printed, showing the parameter passed.
+
+Expected Output:
+
+in A
+in B
+in B 4
+"in A" would be printed by the constructor of class A (assuming it exists).
+"in B" is printed by the default constructor of class B.
+"in B 4" is printed by the parameterized constructor of class B.

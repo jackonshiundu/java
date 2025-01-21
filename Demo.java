@@ -5,4 +5,4 @@ class Demo {
     }
 }
 
-//so basically for child components it calls the super that why the parent value prints first then  that constructor value.
+//so basically for child components it calls the super that why the parent value prints first then  tzhat constructor value.
