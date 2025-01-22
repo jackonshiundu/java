@@ -456,3 +456,64 @@ Expected Output
 This is A
 This is B
 This is C
+
+# Final.java
+
+This Java program demonstrates several fundamental concepts in object-oriented programming and Java syntax, including:
+
+The final keyword
+Upcasting and Downcasting
+Wrapper Classes and Autoboxing/Unboxing
+Concepts Covered:
+
+1. The final Keyword
+   The final keyword is used in Java to make variables, methods, and classes constant or non-modifiable. It can be applied in the following ways:
+
+   Final Method: When a method is declared as final, it cannot be overridden in any subclass. In the provided code, the show() method in class A is declared as final, meaning it cannot be overridden by class B. If you attempt to override this method in class B, it would result in a compilation error.
+
+   public final void show(){
+   System.out.println("This is showing Hello A");
+   }
+   Final Variable: A final variable cannot be reassigned once its value is initialized. For example, in the main method, the variable num is declared as final, so attempting to reassign a new value to num would result in a compilation error:
+
+   final int num = 9;
+   // num = 8; // This line would cause an error
+   Final Class: A class can also be declared as final to prevent inheritance. However, this is not demonstrated directly in the code, but the principle remains important to avoid subclassing or extending a class.
+
+2. Upcasting and Downcasting
+   These are related to type casting in Java, where an object of one class type is treated as an object of another class type.
+
+   Upcasting: This occurs when a subclass object is referenced by a superclass type. It happens automatically and does not require explicit casting. In the program, we create an instance of class B and upcast it to class A. This is done because class B is a subclass of class A.
+
+   A obj = (A) new B();
+   obj.hello1();
+   Here, obj is an instance of class B, but it is treated as an object of class A due to upcasting.
+
+   Downcasting: This occurs when an object of a superclass is cast back into a subclass. It requires explicit casting and can throw a ClassCastException if the object is not of the expected type. In the program, after upcasting, we perform downcasting to access methods of class B that are not available in class A.
+
+   B obj1 = (B) obj;
+   obj1.hello2();
+   Here, obj is cast back to class B to call the hello2() method, which is specific to class B.
+
+3. Wrapper Classes and Autoboxing/Unboxing
+   Wrapper classes are used in Java to wrap primitive data types into objects. These are necessary for using primitive data types in situations that require objects, such as in collections (e.g., ArrayList). Java provides a wrapper class for each primitive type, such as Integer for int, Double for double, and Character for char.
+
+   Autoboxing: The automatic conversion between primitive types and their corresponding wrapper classes is called autoboxing. For example, the int value num0 is automatically converted to an Integer object num1 when assigned.
+
+   Integer num1 = 8; // autoboxing
+   Unboxing: This is the reverse process of autoboxing, where an object of a wrapper class is automatically converted back to its primitive type. In the program, the Integer object num2 is unboxed into a primitive int value.
+
+   int num3 = num2.intValue(); // explicit unboxing
+   int num4 = num2; // auto-unboxing
+   Using Wrapper Methods: The wrapper classes provide several utility methods, such as parseInt() in Integer, which converts a String to a primitive int:
+
+   String str = "35";
+   int num5 = Integer.parseInt(str);
+   System.out.println(num5 \* 4); // Output: 140
+
+Expected Output:
+
+Prited Hello in A
+Prited Hello in B
+8
+140
